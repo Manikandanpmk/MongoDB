@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cdata.jdbc.mongodb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Program Files/CData/CData JDBC Driver for MongoDB 2022/lib/cdata.jdbc.mongodb.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

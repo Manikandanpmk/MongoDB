@@ -1,24 +1,24 @@
 package mongodb;
-
-import java.io.InputStream;
-import java.util.Arrays;
 import java.sql.*;
-import java.util.Base64;
 public class Mongo {
     public static void main(String[] args) throws SQLException {
-//Registering the Driver
         Connection connection;
         connection = DriverManager.getConnection("jdbc:mongodb:Server=localhost;Database=Manitest;");
         Statement stat = connection.createStatement();
-        PreparedStatement pstmt = null;
-        String rs = null;
-        try {
-            String cmd = "Execute AddDocument @collection='Account', @document='{_id : 44, val1: \"Hello world!\", val2: 3.14}'";
-            pstmt = connection.prepareStatement(cmd);
-            rs = String.valueOf(pstmt.execute(cmd));
+        CallableStatement cstmt = connection.prepareCall("AddDocument");
+        cstmt.setString("collection", "testcdata");
+        cstmt.setString("document", "{\"buffer\": {\n" +
+                " \"$binary\": {\n" +
+                " \"base64\": \"46d989eaf0bde5258029534bc2dc2089\",\n" +
+                " \"subType\": \"00\"\n" +
+                " }}}");
+        boolean ret = cstmt.execute();
+        if (ret) {
+            int count = cstmt.getUpdateCount();
+            if (count != -1) {
+                System.out.println("Affected rows: " + count);
+            }
         }
-        catch (SQLException e) {
-            System.out.println(e);
-        }
+        ResultSet rs = cstmt.getResultSet();
     }
 }

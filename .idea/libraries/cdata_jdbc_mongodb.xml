@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="cdata.jdbc.mongodb">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Program Files/CData/CData JDBC Driver for MongoDB 2022/lib/cdata.jdbc.mongodb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/jar_files/mongo-java-driver-3.12.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/jar_files (1)/bson-4.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/jar_files (1)/bson-record-codec-4.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/jar_files (1)/mongodb-driver-core-4.9.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

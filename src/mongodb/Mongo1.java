@@ -1,10 +1,9 @@
 package mongodb;
-
 import java.io.InputStream;
 import java.util.Arrays;
 import java.sql.*;
 import java.util.Base64;
-public class Mongo {
+public class Mongo1 {
     public static void main(String[] args) throws SQLException {
 //Registering the Driver
         Connection connection;
